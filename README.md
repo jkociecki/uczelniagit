@@ -1,0 +1,3 @@
+# uczelniagit
+
+JĘDRZEJ PIERDOLI SOCZYSTYM GONWEM
