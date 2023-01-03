@@ -1,0 +1,30 @@
+Jedrzerj Kociecki 392843924 44 m 3928489324 1 false true true PSiO Algebta 
+Ala Kowalska 392849324 66 k 32948394 6 false true true PSiO Algebta Logika 
+Julia Kowalska 9328493284 22 k 9843258324 7 false true true PSiO Algebta 
+Oliwia Kowalska 98593485 45 k 30994852 3 false false true PSiO Algebta Logika Analiza 
+Jan Kowalski 2398493284 55 m 98431289 4 false false false PSiO 
+Jan Kowalski 23982938 19 m 9120019 1 false false false PSiO Algebta Logika Analiza Logika 
+Jan Kowalski 213213123 19 m12321 123213 2 false true false Grafika Algorytmika Algebta Prawdopodobienstwo Grafika Algorytmika Algebta Prawdopodobienstwo 
+Jan Maciuk 213213123 19 m12321 123213 2 false true false Grafika Algorytmika Algebta Prawdopodobienstwo Grafika Algorytmika Algebta Prawdopodobienstwo 
+Mikolaj Olesinski 923849324 20 m 924834934 3 false true true PSiO Algebta Logika Analiza 
+Karol Witkowski 328743284 19 m 272711 1 false true false Analiza Algebta Fizyka Algorytmika Analiza 
+Jedrzerj Kociecki 392843924 44 m 3928489324 1 false true true PSiO Algebta 
+Ala Kowalska 392849324 66 k 32948394 6 false true true PSiO Algebta Logika 
+Julia Kowalska 9328493284 22 k 9843258324 7 false true true PSiO Algebta 
+Oliwia Kowalska 98593485 45 k 30994852 3 false false true PSiO Algebta Logika Analiza 
+Jan Kowalski 2398493284 55 m 98431289 4 false false false PSiO 
+Jan Kowalski 23982938 19 m 9120019 1 false false false PSiO Algebta Logika Analiza Logika 
+Jan Kowalski 213213123 19 m12321 123213 2 false true false Grafika Algorytmika Algebta Prawdopodobienstwo Grafika Algorytmika Algebta Prawdopodobienstwo 
+Jan Maciuk 213213123 19 m12321 123213 2 false true false Grafika Algorytmika Algebta Prawdopodobienstwo Grafika Algorytmika Algebta Prawdopodobienstwo 
+Mikolaj Olesinski 923849324 20 m 924834934 3 false true true PSiO Algebta Logika Analiza 
+Karol Witkowski 328743284 19 m 272711 1 false true false Analiza Algebta Fizyka Algorytmika Analiza 
+Jedrzerj Kociecki 392843924 44 m 3928489324 1 false true true PSiO Algebta 
+Ala Kowalska 392849324 66 k 32948394 6 false true true PSiO Algebta Logika 
+Julia Kowalska 9328493284 22 k 9843258324 7 false true true PSiO Algebta 
+Oliwia Kowalska 98593485 45 k 30994852 3 false false true PSiO Algebta Logika Analiza 
+Jan Kowalski 2398493284 55 m 98431289 4 false false false PSiO 
+Jan Kowalski 23982938 19 m 9120019 1 false false false PSiO Algebta Logika Analiza Logika 
+Jan Kowalski 213213123 19 m12321 123213 2 false true false Grafika Algorytmika Algebta Prawdopodobienstwo Grafika Algorytmika Algebta Prawdopodobienstwo 
+Jan Maciuk 213213123 19 m12321 123213 2 false true false Grafika Algorytmika Algebta Prawdopodobienstwo Grafika Algorytmika Algebta Prawdopodobienstwo 
+Mikolaj Olesinski 923849324 20 m 924834934 3 false true true PSiO Algebta Logika Analiza 
+Karol Witkowski 328743284 19 m 272711 1 false true false Analiza Algebta Fizyka Algorytmika Analiza 
