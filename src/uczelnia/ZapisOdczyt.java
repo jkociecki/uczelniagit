@@ -332,7 +332,7 @@ public class ZapisOdczyt extends Main {
         String imie; String nazwisko; String pesel; int wiek; String plec; int stazPracy; int pensja; String stanowiskoPracy; int liczbaPublikacji;
         try {
             FileReader fileReader = new FileReader("C:\\Users\\Flex 5 IIL\\IdeaProjects\\Uczelnia\\src\\Uczelnia\\pracownicy.txt");
-            FileReader fileReaderKursy = new FileReader("C:\\Users\\Flex 5 IIL\\IdeaProjects\\Uczelnia\\src\\Uczelnia\\kursy.txt");
+            FileReader fileReaderKursy = new FileReader("C:\\Users\\Flex 5 IIL\\IdeaProjects\\Uczelnia\\src\\uczelnia\\kursyPom");
             FileReader fileReaderAdm = new FileReader("C:\\Users\\Flex 5 IIL\\IdeaProjects\\Uczelnia\\src\\Uczelnia\\Administracja.txt");
 
             FileReader fileReaderStudenci = new FileReader("C:\\Users\\Flex 5 IIL\\IdeaProjects\\Uczelnia\\src\\Uczelnia\\studenciaki.txt");
@@ -420,8 +420,8 @@ public class ZapisOdczyt extends Main {
         try {
             FileWriter file1 = new FileWriter("C:\\Users\\Flex 5 IIL\\IdeaProjects\\Uczelnia\\src\\Uczelnia\\pracownicy.txt");
             BufferedWriter bufferedWriter1 = new BufferedWriter(file1);
-            for(int i = 0; i < PracownikUczelni.wszyscyPracownicy.size() ; i++){
-                bufferedWriter1.write(PracownikUczelni.wszyscyPracownicy.get(i).toString() + "\n");
+            for(int i = 0; i < PracownikBadawczoDydaktyczny.pomoc.size() ; i++){
+                bufferedWriter1.write(PracownikBadawczoDydaktyczny.pomoc.get(i).toString() + "\n");
 
             }
             bufferedWriter1.close();
@@ -430,8 +430,8 @@ public class ZapisOdczyt extends Main {
         }
 
         try {
-            FileWriter file2 = new FileWriter("C:\\Users\\Flex 5 IIL\\IdeaProjects\\Uczelnia\\src\\Uczelnia\\kursy.txt");
-            BufferedWriter bufferedWriter2 = new BufferedWriter(file2);
+            FileWriter file3 = new FileWriter("C:\\Users\\Flex 5 IIL\\IdeaProjects\\Uczelnia\\src\\uczelnia\\kursyPom");
+            BufferedWriter bufferedWriter2 = new BufferedWriter(file3);
             for(int i = 0; i < Kursy.wszystkieKursy.size(); i++){
                 bufferedWriter2.write(Kursy.wszystkieKursy.get(i).toString() + "\n");
             }

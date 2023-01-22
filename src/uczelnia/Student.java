@@ -1,9 +1,13 @@
 package uczelnia;
 
-import java.util.ArrayList;
-import java.util.Scanner;
+import Obserwator.Subject;
 
-public class Student extends Osoba {
+import java.util.ArrayList;
+import java.util.Objects;
+import java.util.Scanner;
+import java.util.TreeSet;
+
+public class Student extends Osoba{
     static ArrayList<Student> wszyscyStudenci = new ArrayList<Student>();
     String indeks;
     int rok;
@@ -20,6 +24,7 @@ public class Student extends Osoba {
         this.czyPierwszyStopien = czyPierwszyStopien;
         this.czyStacjonarne = czyStacjonarne;
     }
+
     public static void dodajStudenta(){
         Scanner scanner = new Scanner(System.in); int petla = 0;
         ArrayList<Kursy> pomoc = new ArrayList<>();
@@ -160,6 +165,13 @@ public class Student extends Osoba {
         }
         return pom;
     }
+    public static void usunPowtorki(){
+        TreeSet<Student> bezPowtorzen = new TreeSet<>(wszyscyStudenci);
+
+    }
+
+
+
     public static String siku(boolean b){
         if(b == true) return "tak";
         else return "nie";
@@ -207,11 +219,52 @@ public class Student extends Osoba {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return Objects.equals(indeks, student.indeks);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(indeks);
+    }
+
+    @Override
     public String toString() {
         return super.toString() +" "+  indeks +" "+ rok +" "+ czyErasmus +" "+ czyPierwszyStopien +" "+czyStacjonarne +" " + wyswietlKursy();
     }
 
     public static ArrayList<Student> getWszyscyStudenci() {
         return wszyscyStudenci;
+    }
+
+    public static void setWszyscyStudenci(ArrayList<Student> wszyscyStudenci) {
+        Student.wszyscyStudenci = wszyscyStudenci;
+    }
+
+    public void setIndeks(String indeks) {
+        this.indeks = indeks;
+    }
+
+    public void setRok(int rok) {
+        this.rok = rok;
+    }
+
+    public void setKursy(ArrayList<Kursy> kursy) {
+        this.kursy = kursy;
+    }
+
+    public void setCzyErasmus(boolean czyErasmus) {
+        this.czyErasmus = czyErasmus;
+    }
+
+    public void setCzyPierwszyStopien(boolean czyPierwszyStopien) {
+        this.czyPierwszyStopien = czyPierwszyStopien;
+    }
+
+    public void setCzyStacjonarne(boolean czyStacjonarne) {
+        this.czyStacjonarne = czyStacjonarne;
     }
 }

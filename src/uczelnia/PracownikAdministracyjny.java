@@ -8,6 +8,8 @@ public class PracownikAdministracyjny extends PracownikUczelni {
     int nadgodziny;
 
     static ArrayList<PracownikAdministracyjny> pracownicyAdministracyjni = new ArrayList<>();
+
+
     public PracownikAdministracyjny(){
         super();
         stanowiskoPracy = "";
@@ -72,7 +74,16 @@ public class PracownikAdministracyjny extends PracownikUczelni {
             }
         }
         return null;
+    }    public static ArrayList<PracownikAdministracyjny> StrategiaSearchLista(String pesel){
+        ArrayList<PracownikAdministracyjny> pomoc = new ArrayList<>();
+        for(int i = 0; i < pracownicyAdministracyjni.size(); i++){
+            if(pracownicyAdministracyjni.get(i).getPesel().equals(pesel)){
+                pomoc.add(pracownicyAdministracyjni.get(i));
+            }
+        }
+        return pomoc;
     }
+
     public static String szukajPoStazu(int staz){
         String wynik = "";
         for(int i = 0; i < pracownicyAdministracyjni.size(); i++){
@@ -114,10 +125,12 @@ public class PracownikAdministracyjny extends PracownikUczelni {
             System.out.println("Podaj staz pracy");
             ArrayList<PracownikUczelni> found = new ArrayList<PracownikUczelni>();
             int name = scanner.nextInt();
-            for (int i = 0; i < pracownicyAdministracyjni.size(); i++) {
-                if (pracownicyAdministracyjni.get(i).getStazPracy() == name) {
-                    found.add(pracownicyAdministracyjni.get(i));
+            for(PracownikAdministracyjny pracownikAdministracyjny : pracownicyAdministracyjni) {
+                if (pracownikAdministracyjny.getStazPracy() == name) {
+                    found.add(pracownikAdministracyjny);
                 }
+
+
             }
             pracownicyAdministracyjni.removeAll(found);
         }
@@ -125,12 +138,19 @@ public class PracownikAdministracyjny extends PracownikUczelni {
             System.out.println("Podaj stanowisko");
             ArrayList<PracownikUczelni> found = new ArrayList<PracownikUczelni>();
             String name = scanner.next();
-            for (int i = 0; i < pracownicyAdministracyjni.size(); i++) {
-                if (pracownicyAdministracyjni.get(i).getStanowisko().equals(name)) {
-                    found.add(pracownicyAdministracyjni.get(i));
+            for (PracownikAdministracyjny pracownikAdministracyjny : pracownicyAdministracyjni) {
+                if (pracownikAdministracyjny.getStanowisko().equals(name)) {
+                    found.add(pracownikAdministracyjny);
                 }
             }
             pracownicyAdministracyjni.removeAll(found);
+        }
+    }
+    public static void dajPodwyzke(String pesel, int pensja){
+        for (PracownikUczelni pracownikUczelni : wszyscyPracownicy) {
+            if (pracownikUczelni.getPesel().equals(pesel)) {
+                pracownikUczelni.setPensja(pensja);
+            }
         }
     }
     public PracownikAdministracyjny(String imie, String nazwisko, String pesel, int wiek, String plec,int stazPracy, int pensja,String stanowiskoPracy, int nadgodziny){
@@ -195,6 +215,18 @@ public class PracownikAdministracyjny extends PracownikUczelni {
     }
     public static void AdministracjaImieWiekSort(){
         pracownicyAdministracyjni.sort(Osoba::osoobaCompereNaziskoWiek);
+    }
+
+    public void setStanowiskoPracy(String stanowiskoPracy) {
+        this.stanowiskoPracy = stanowiskoPracy;
+    }
+
+    public void setNadgodziny(int nadgodziny) {
+        this.nadgodziny = nadgodziny;
+    }
+
+    public static void setPracownicyAdministracyjni(ArrayList<PracownikAdministracyjny> pracownicyAdministracyjni) {
+        PracownikAdministracyjny.pracownicyAdministracyjni = pracownicyAdministracyjni;
     }
 
     public int getNadgodziny() {

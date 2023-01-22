@@ -1,6 +1,9 @@
 package strategia;
 
+import uczelnia.PracownikAdministracyjny;
+import uczelnia.PracownikBadawczoDydaktyczny;
 import uczelnia.PracownikUczelni;
+import uczelnia.ZapisOdczyt;
 
 public class SposobNaPodwyzkeA implements Strategia {
     public void strategia(PracownikUczelni pracownikUczelni){
@@ -14,8 +17,9 @@ public class SposobNaPodwyzkeA implements Strategia {
             pensja += 700;
             premia = 700;
         }
-        pracownikUczelni.setPensja(pensja);
-        System.out.println("Dla pracownika: " + pracownikUczelni.getImie() +"  "+pracownikUczelni.getNazwisko());
-        System.out.println("Przydzielono premie w wysokosci: "+ premia);
+        String pesel = pracownikUczelni.getPesel();
+        PracownikBadawczoDydaktyczny.dajPdwyzke(pesel,pensja);
+        PracownikAdministracyjny.dajPodwyzke(pesel,pensja);
+
     }
 }

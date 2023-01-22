@@ -1,6 +1,7 @@
 package uczelnia;
 
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class PracownikBadawczoDydaktyczny extends PracownikUczelni {
@@ -72,6 +73,32 @@ public class PracownikBadawczoDydaktyczny extends PracownikUczelni {
     public static ArrayList<PracownikBadawczoDydaktyczny> zwrocPomoc(){
         return pomoc;
     }
+    public static void usunPoPeselu(String pesel){
+        ArrayList<PracownikBadawczoDydaktyczny> pomagier = new ArrayList<>();
+        for(int i = 0;i < pomoc.size(); i++){
+            if(pomoc.get(i).getPesel().equals(pesel)){
+                pomagier.add(pomoc.get(i));
+            }
+        }
+        pomoc.removeAll(pomagier);
+    }
+    public static PracownikBadawczoDydaktyczny strategiaSearch(String pesel){
+        for(int i = 0 ; i < pomoc.size(); i++){
+            if(pomoc.get(i).equals(pesel)){
+                return pomoc.get(i);
+            }else return null;
+        }
+        return null;
+    }
+    public static ArrayList<PracownikBadawczoDydaktyczny> strategiaSearchLista(String pesel){
+        ArrayList<PracownikBadawczoDydaktyczny> pomoc1 = new ArrayList<>();
+        for(int i = 0 ; i < pomoc.size(); i++){
+            if(pomoc.get(i).equals(pesel)){
+                pomoc1.add(pomoc.get(i));
+            }
+        }
+        return pomoc1;
+    }
     public static void usunListe(ArrayList<PracownikBadawczoDydaktyczny> pracownikBadawczoDydaktycznies){
         pomoc.removeAll(pracownikBadawczoDydaktycznies);
     }
@@ -97,6 +124,21 @@ public class PracownikBadawczoDydaktyczny extends PracownikUczelni {
         String wiek1 = Integer.toString(wiek);
         return wiek1;
     }
+    public static void dajPdwyzke(String pesel, int pensja){
+        for(int i = 0 ; i < pomoc.size(); i++){
+            if(pomoc.get(i).getPesel().equals(pesel)){
+                System.out.println(pomoc.get(i).getPensjaS());
+                pomoc.get(i).setPensja(pensja);
+                System.out.println(pomoc.get(i).getPensja());
+            }
+        }
+        for(PracownikUczelni p : wszyscyPracownicy){
+            if(p.getPesel().equals(pesel)){
+                p.setPensja(pensja);
+            }
+        }
+    }
+
     public String getLiczbaPublikacjiS(){
         int wiek = getLiczbaPublikacji();
         String wiek1 = Integer.toString(wiek);
@@ -131,4 +173,19 @@ public class PracownikBadawczoDydaktyczny extends PracownikUczelni {
     }
 
 
+    public static void setPomoc(ArrayList<PracownikBadawczoDydaktyczny> pomoc) {
+        PracownikBadawczoDydaktyczny.pomoc = pomoc;
+        wszyscyPracownicy.removeAll(wszyscyPracownicy);
+        for(PracownikBadawczoDydaktyczny p : pomoc){
+           wszyscyPracownicy.add((PracownikUczelni) p);
+        }
+    }
+
+    public void setStanowiskoPracy(String stanowiskoPracy) {
+        this.stanowiskoPracy = stanowiskoPracy;
+    }
+
+    public void setLiczbaPublikacji(int liczbaPublikacji) {
+        this.liczbaPublikacji = liczbaPublikacji;
+    }
 }
